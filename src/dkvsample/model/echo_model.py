@@ -1,3 +1,9 @@
+'''
+Data model for POST /echo endpoint.
+
+Author: Eduard Dankov <contact@dankov.dev>
+'''
+
 from pydantic import BaseModel
 
 
