@@ -1,3 +1,9 @@
+'''
+Main application file
+
+Author: Eduard Dankov <contact@dankov.dev>
+'''
+
 from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -45,10 +51,19 @@ async def echo_check(payload: EchoModel) -> Response:
 
 
 def main(port: int) -> None:
+    '''
+    Application entry point.
+
+    Parameters:
+    port (int): Port to start application at.
+    '''
     uvicorn.run(app, host='0.0.0.0', port=port)
 
 
 def run_local() -> None:
+    '''
+    Entry point for 'local' run configuration.
+    '''
     main(8320)
 
 
